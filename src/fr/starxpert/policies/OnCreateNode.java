@@ -1,8 +1,9 @@
 package fr.starxpert.policies;
 
 /**
- * Created by lepad on 02/09/16.
+ * Created by Valtchev Etienne on 02/09/16.
  */
+
 
     import fr.starxpert.utils.IparapheurExtensionService;
     import org.alfresco.model.ContentModel;
@@ -12,11 +13,13 @@ package fr.starxpert.policies;
     import org.alfresco.repo.policy.Behaviour.NotificationFrequency;
     import org.alfresco.service.cmr.repository.ChildAssociationRef;
     import org.alfresco.service.namespace.QName;
+    import org.apache.log4j.Logger;
 
-    public class OnCreateNode implements OnCreateNodePolicy {
+public class OnCreateNode implements OnCreateNodePolicy {
         private PolicyComponent policyComponent;
         private IparapheurExtensionService iparapheurExtensionService;
 
+        private final Logger logger = Logger.getLogger(OnCreateNode.class);
         public OnCreateNode() {
         }
 
